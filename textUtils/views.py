@@ -9,11 +9,11 @@ def index(request):
 
 
 def analyze(request):
-    djtext = request.GET.get('text', 'default')
-    removepunc = request.GET.get('removepunc', 'off')
-    capitalize = request.GET.get('capitalize', 'off')
-    removeExtraSpace = request.GET.get('removeExtraSpace','off')
-    charcount = request.GET.get('charcount', 'off')
+    djtext = request.POST.get('text', 'default')
+    removepunc = request.POST.get('removepunc', 'off')
+    capitalize = request.POST.get('capitalize', 'off')
+    removeExtraSpace = request.POST.get('removeExtraSpace','off')
+    charcount = request.POST.get('charcount', 'off')
     newlineremover = request.POST.get('newlineremover', 'off')
 
     if removepunc == "on":
